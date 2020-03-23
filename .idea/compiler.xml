@@ -9,5 +9,9 @@
         <module name="HamcrestAssertJExample" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="matchersExample.HamcrestAssertJExample.main" target="1.8" />
+      <module name="matchersExample.HamcrestAssertJExample.test" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

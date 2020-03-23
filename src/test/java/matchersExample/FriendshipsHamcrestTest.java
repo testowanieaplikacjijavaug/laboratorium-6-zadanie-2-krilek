@@ -1,18 +1,26 @@
 package matchersExample;
 
-//public class SquareArrayHamcrestTest {
-//
-//    private SquareArray array;
-//
-//    @Before
-//    public void setUp() throws Exception {
-//        array = new SquareArray();
-//    }
-//
-//    @Test
-//    public void createInstance(){
-//        assertThat(array.getClass(), is(SquareArray.class));
-//    }
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.*;
+
+public class FriendshipsHamcrestTest {
+
+    private Friendships friendships;
+
+    @BeforeEach
+    public void setUp() throws Exception {
+        friendships = new Friendships();
+    }
+
+    @Test
+    public void createInstance(){
+        assertThat(friendships.getClass(), is(Friendships.class));
+    }
+
 //
 //    @Test
 //    public void getArray(){
@@ -48,10 +56,10 @@ package matchersExample;
 //        List <Integer> tempList = array.getList();
 //        assertThat(tempList.get(0),allOf(lessThan(4), greaterThan(0)));
 //    }
-//
-//    @After
-//    public void tearDown() throws Exception {
-//        array = null;
-//    }
-//
-//}
+
+    @AfterEach
+    public void tearDown() throws Exception {
+        friendships = null;
+    }
+
+}
