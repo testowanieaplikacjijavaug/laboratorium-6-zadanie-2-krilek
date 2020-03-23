@@ -1,0 +1,1 @@
+![GitHub Classroom Workflow](https://github.com/testowanieaplikacjijavaug/laboratorium-6-zadanie-2-krilek/workflows/GitHub%20Classroom%20Workflow/badge.svg)
