@@ -74,6 +74,27 @@ public class FriendshipsAssertJTest {
     }
 
     @Test
+    public void AreFriendsOfReversedShouldntChangeOutput(){
+        friendships.makeFriends("A", "B");
+        assertThat(friendships.areFriends("A", "B")).isTrue();
+        assertThat(friendships.areFriends("B", "A")).isTrue();
+    }
+
+    @Test
+    public void AreFriendsOfNotExisting(){
+        friendships.makeFriends("A", "B");
+        assertThat(friendships.areFriends("C", "D")).isFalse();
+        assertThat(friendships.areFriends("E", "F")).isFalse();
+    }
+
+    @Test
+    public void AreFriendsOfSingleNotExisting(){
+        friendships.makeFriends("A", "B");
+        assertThat(friendships.areFriends("C", "B")).isFalse();
+        assertThat(friendships.areFriends("A", "C")).isFalse();
+    }
+
+    @Test
     public void MakeFriendsOfNull(){
         assertThatThrownBy(() -> friendships.makeFriends(null, null))
                 .isInstanceOf(InvalidParameterException.class);
