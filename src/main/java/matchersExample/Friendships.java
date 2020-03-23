@@ -32,12 +32,7 @@ public class Friendships {
         if(person1 == null || person2 == null){
             return false;
         }
-        List<String> friendsOfP1 = getFriendsList(person1);
-        if(friendsOfP1 != null){
-            return friendsOfP1.contains(person2);
-        }
-
-        return false;
+        return getFriendsList(person1).contains(person2);
     }
     //Dodanie do listy przyjaciol do danej osoby
     private void addFriend(String person, String friend) {
